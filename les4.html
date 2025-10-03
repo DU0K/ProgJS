@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*
+//optellen
+    add(7, 3);
+    function add(getalA, GetalB){
+        let som = getalA + GetalB;
+        console.log(som);
+    }
+//vermenigvuldigen
+    multiply(2, 10);
+    function multiply(getalA, GetalB){
+        let som = getalA * GetalB;
+        console.log(som);
+    }
+//dobbelsteen
+    rolldice();
+    function rolldice(){
+        let randomnumber = Math.ceil(Math.random() * 6);
+        console.log(randomnumber);
+        return randomnumber;
+    }
+    let d1 = rolldice();
+    let d2 = rolldice();
+    let d3 = rolldice();
+    let d4 = rolldice();
+*/
+function berekenLeeftijd(jaar, maand, dag){
+    let now = new Date();
+    let birthdate = new Date(jaar, maand, dag);
+    let difference = now - birthdate;
+    difference = Math.floor(difference / (1000 * 60 * 60 * 24 * 365));
+    console.log(difference);
+}
+berekenLeeftijd(1990, 1, 8);
+</script>
+</html>
