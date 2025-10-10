@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stylesheets/styleles5.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Stats</h1>
+    <h1 id="str"></h1>
+    <h1 id="dex"></h1>
+    <h1 id="con"></h1>
+    <h1 id="int"></h1>
+    <h1 id="wis"></h1>
+    <h1 id="cha"></h1>
+</body>
+<script>
+    function RollDice(){
+        let RandomDice = Math.floor(Math.random() * 6 + 1);
+        return RandomDice
+    }
+    function RollStat(){
+        let N1 = RollDice();
+        let N2 = RollDice();
+        let N3 = RollDice();
+        let N4 = RollDice();
+        let Nmin = (N1, N2, N3, N4);
+        Math.min(Nmin);
+        let Nplus = N1 + N2 + N3 + N4;
+        let Dice3 = Nplus - Nmin;
+        return Dice3
+    }
+
+    function StatDisplay(Argument1, Argument2){
+        let strEL = document.getElementById(Argument1);
+        let strSTAT = RollStat();
+        strEL.innerText = Argument2 + strSTAT;
+    }
+
+    StatDisplay("str", "STR: ")
+    StatDisplay("dex", "DEX: ")
+    StatDisplay("con", "CON: ")
+    StatDisplay("int", "INT: ")
+    StatDisplay("wis", "WIS: ")
+    StatDisplay("cha", "CHA: ")
+
+</script>
+</html>
