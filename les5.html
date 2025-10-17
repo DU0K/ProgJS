@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="stylesheets/styleles5.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Stats</h1>
     <h1 id="str"></h1>
@@ -14,13 +16,14 @@
     <h1 id="int"></h1>
     <h1 id="wis"></h1>
     <h1 id="cha"></h1>
+    <button onclick="rollChar()">Roll char</button>
 </body>
 <script>
-    function RollDice(){
+    function RollDice() {
         let RandomDice = Math.floor(Math.random() * 6 + 1);
         return RandomDice
     }
-    function RollStat(){
+    function RollStat() {
         let N1 = RollDice();
         let N2 = RollDice();
         let N3 = RollDice();
@@ -32,18 +35,22 @@
         return Dice3
     }
 
-    function StatDisplay(Argument1, Argument2){
+    function StatDisplay(Argument1, Argument2) {
         let strEL = document.getElementById(Argument1);
         let strSTAT = RollStat();
         strEL.innerText = Argument2 + strSTAT;
     }
 
-    StatDisplay("str", "STR: ")
-    StatDisplay("dex", "DEX: ")
-    StatDisplay("con", "CON: ")
-    StatDisplay("int", "INT: ")
-    StatDisplay("wis", "WIS: ")
-    StatDisplay("cha", "CHA: ")
+    function rollChar() {
+        StatDisplay("str", "STR: ")
+        StatDisplay("dex", "DEX: ")
+        StatDisplay("con", "CON: ")
+        StatDisplay("int", "INT: ")
+        StatDisplay("wis", "WIS: ")
+        StatDisplay("cha", "CHA: ")
+    }
+
 
 </script>
+
 </html>
