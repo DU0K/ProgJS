@@ -10,13 +10,13 @@
 
 <body>
     <h1>Stats</h1>
-    <h1 id="str"></h1>
-    <h1 id="dex"></h1>
-    <h1 id="con"></h1>
-    <h1 id="int"></h1>
-    <h1 id="wis"></h1>
-    <h1 id="cha"></h1>
-    <button onclick="rollChar()">Roll char</button>
+    <h1 id="str">0</h1>
+    <h1 id="dex">0</h1>
+    <h1 id="con">0</h1>
+    <h1 id="int">0</h1>
+    <h1 id="wis">0</h1>
+    <h1 id="cha">0</h1>
+    <button onclick="rollChar()" ondblclick="rollCheat()">Roll char</button>
 </body>
 <script>
     function RollDice() {
@@ -50,6 +50,20 @@
         StatDisplay("cha", "CHA: ")
     }
 
+    function StatDisplayCheat(Argument1, Argument2) {
+        let strEL = document.getElementById(Argument1);
+        strEL.innerText = Argument2;
+    }
+
+    function rollCheat(){
+        StatDisplayCheat("dex", "DEX: 20")
+        StatDisplayCheat("str", "STR: 20")
+        StatDisplayCheat("con", "CON: 20")
+        StatDisplayCheat("int", "INT: 20")
+        StatDisplayCheat("wis", "WIS: 20")
+        StatDisplayCheat("cha", "CHA: 20")
+    }
+    
 
 </script>
 
